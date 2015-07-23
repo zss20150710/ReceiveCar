@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:layout_marginLeft="50dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_launcher"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:hint="请输入手机号"
+            android:id="@+id/et_phone_num"
+            android:layout_gravity="center_vertical"
+            android:imeOptions="actionSearch"
+            android:background="@drawable/receive_shape"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <com.example.administrator.receivecar.AddNewCarPopView
+        android:id="@+id/addNewCarPopView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        >
+    </com.example.administrator.receivecar.AddNewCarPopView>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+
+        >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/imageView2" />
+
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginTop="12dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="VIN"
+                   android:textSize="20sp"
+                   android:textColor="#000"
+                   android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                   android:id="@+id/textView_vin" />
+               <EditText
+                   android:layout_marginTop="5dp"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="text"
+                   android:hint="请输入17位VIN号"
+                   android:textSize="20sp"
+                   android:imeOptions="actionSearch"
+                   android:id="@+id/et_car_vin"
+                   android:layout_marginBottom="5dp"
+                   android:gravity="center_horizontal"
+                   android:background="@drawable/receive_shape"
+
+                   />
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_launcher"
+                   android:layout_gravity="left"
+                   android:id="@+id/iv_car_version" />
+
+           </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_launcher"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="增加车辆"
+        android:id="@+id/button3"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

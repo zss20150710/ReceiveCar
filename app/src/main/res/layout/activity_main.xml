@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#2d82d7"
+        android:paddingBottom="10dp"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/iv_turn_left"
+            android:scaleType="matrix"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:onClick="click"
+            android:src="@drawable/turn_left" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/iv_turn_left"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/linearLayout">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/button2" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/button" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_receive_user"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:paddingRight="5dp"
+            android:onClick="click" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignLeft="@+id/relativeLayout"
+        android:layout_marginTop="20dp"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/relativeLayout2">
+
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="30dp"
+            android:paddingRight="25dp"
+            android:background="@drawable/receive_shape"
+            android:id="@+id/et_car_num"
+            android:hint="请输入车牌号"
+            android:imeOptions="actionSearch"
+            android:inputType="text" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignBottom="@+id/et_car_num"
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_receive_camera"
+            android:layout_alignParentEnd="true"
+            android:onClick="click" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_receive_point"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText2"
+            android:text="切换特殊牌照"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_alignTop="@+id/iv_receive_point"
+            android:layout_toRightOf="@+id/iv_receive_point"
+            android:layout_toEndOf="@+id/iv_receive_point"
+            android:layout_alignParentBottom="true" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_receive_skip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/relativeLayout2"
+        android:layout_alignEnd="@+id/relativeLayout2"
+        android:src="@drawable/ic_launcher"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:onClick="click" />
+
+    <LinearLayout
+        android:id="@+id/rl_replace_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.example.administrator.receivecar.OldUserMsgView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_msg_view"
+            ></com.example.administrator.receivecar.OldUserMsgView>
+
+        <com.example.administrator.receivecar.AddNewCarView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_car_view"
+           android:visibility="gone"></com.example.administrator.receivecar.AddNewCarView>
+    </LinearLayout>
+
+
+</RelativeLayout>
